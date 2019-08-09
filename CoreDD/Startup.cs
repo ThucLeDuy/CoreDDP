@@ -36,7 +36,7 @@ namespace CoreDD
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddDbContext<EmployeeContext>(options =>
+            services.AddDbContext<DBFoodContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));
         }
 

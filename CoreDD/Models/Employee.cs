@@ -8,10 +8,6 @@ namespace CoreDD.Models
     {
         [Key]
         public int EmployeeId { get; set; }
-        [Column(TypeName = "nvarchar(250)")]
-        [Required(ErrorMessage = "This field is required.")]
-        [DisplayName("Full Name")]
-        public string FullName { get; set; }
         [Column(TypeName = "varchar(10)")]
         [DisplayName("Emp. Code")]
         public string EmpCode { get; set; }
@@ -20,5 +16,12 @@ namespace CoreDD.Models
         [Column(TypeName = "varchar(100)")]
         [DisplayName("Office Location")]
         public string OfficeLocation { get; set; }
+        [Column(TypeName = "datetime")]
+        [DisplayName("Hire date")]
+        public System.DateTime HireDate { get; set; }
+        [Column(TypeName = "money")]
+        [DisplayName("Base Salary")]
+        [DisplayFormat(DataFormatString = "{0:C0}")]
+        public decimal? BaseSalary { get; set; }
     }
 }

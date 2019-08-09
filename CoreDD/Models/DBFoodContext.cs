@@ -6,12 +6,14 @@ using System.Threading.Tasks;
 
 namespace CoreDD.Models
 {
-    public class EmployeeContext:DbContext
+    public class DBFoodContext:DbContext
     {
-        public EmployeeContext(DbContextOptions<EmployeeContext> options) : base(options)
+        public DBFoodContext(DbContextOptions<DBFoodContext> options) : base(options)
         {
         }
 
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

@@ -11,9 +11,9 @@ namespace CoreDD.Controllers
 {
     public class EmployeeController : Controller
     {
-        private readonly EmployeeContext _context;
+        private readonly DBFoodContext _context;
 
-        public EmployeeController(EmployeeContext context)
+        public EmployeeController(DBFoodContext context)
         {
             _context = context;
         }
@@ -57,7 +57,7 @@ namespace CoreDD.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddOrEdit([Bind("EmployeeId,FullName,EmpCode,Position,OfficeLocation")] Employee employee)
+        public async Task<IActionResult> AddOrEdit([Bind("EmployeeId,FullName,EmpCode,Position,OfficeLocation,HireDate,BaseSalary")] Employee employee)
         {
             if (ModelState.IsValid)
             {
