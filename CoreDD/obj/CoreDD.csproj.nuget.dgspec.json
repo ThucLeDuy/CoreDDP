@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ldthuc\\Source\\Repos\\ThucLeDuy\\CoreDDP\\CoreDD\\CoreDD.csproj": {}
+    "C:\\Users\\ldthuc\\source\\repos\\ThucLeDuy\\CoreDDP\\CoreDD\\CoreDD.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ldthuc\\Source\\Repos\\ThucLeDuy\\CoreDDP\\CoreDD\\CoreDD.csproj": {
+    "C:\\Users\\ldthuc\\source\\repos\\ThucLeDuy\\CoreDDP\\CoreDD\\CoreDD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ldthuc\\Source\\Repos\\ThucLeDuy\\CoreDDP\\CoreDD\\CoreDD.csproj",
+        "projectUniqueName": "C:\\Users\\ldthuc\\source\\repos\\ThucLeDuy\\CoreDDP\\CoreDD\\CoreDD.csproj",
         "projectName": "CoreDD",
-        "projectPath": "C:\\Users\\ldthuc\\Source\\Repos\\ThucLeDuy\\CoreDDP\\CoreDD\\CoreDD.csproj",
+        "projectPath": "C:\\Users\\ldthuc\\source\\repos\\ThucLeDuy\\CoreDDP\\CoreDD\\CoreDD.csproj",
         "packagesPath": "C:\\Users\\ldthuc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ldthuc\\Source\\Repos\\ThucLeDuy\\CoreDDP\\CoreDD\\obj\\",
+        "outputPath": "C:\\Users\\ldthuc\\source\\repos\\ThucLeDuy\\CoreDDP\\CoreDD\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

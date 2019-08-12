@@ -12,9 +12,7 @@
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>
-                @*@Html.DisplayNameFor(model => model.FullName)*@
-            </th>
+            
             <th>
                 @Html.DisplayNameFor(model => model.EmpCode)
             </th>
@@ -25,16 +23,20 @@
                 @Html.DisplayNameFor(model => model.OfficeLocation)
             </th>
             <th>
-                <a asp-action="AddOrEdit" class="btn btn-outline-success"><i class="far fa-plus-square"></i> Employee</a>
+                @Html.DisplayNameFor(model => model.BaseSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HireDate)
+            </th>
+            <th>
+                <a asp-action="AddOrEditEmployee" class="btn btn-outline-success"><i class="far fa-plus-square"></i> Employee</a>
             </th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <td>
-                @*@Html.DisplayFor(modelItem => item.FullName)*@
-            </td>
+            
             <td>
                 @Html.DisplayFor(modelItem => item.EmpCode)
             </td>
@@ -44,9 +46,14 @@
             <td>
                 @Html.DisplayFor(modelItem => item.OfficeLocation)
             </td>
+            <th>
+                @Html.DisplayNameFor(model => model.BaseSalary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HireDate)
             <td>
-                <a asp-action="AddOrEdit" asp-route-id="@item.EmployeeId"><i class="far fa-maker fa-lg"></i>Edit</a> |
-                
+                <a asp-action="AddOrEditEmployee" asp-route-id="@item.EmployeeId"><i class="far fa-maker fa-lg"></i>Edit</a> |
+
                 <a asp-action="Delete" asp-route-id="@item.EmployeeId" class="text-danger ml-1" onclick="return confirm('Do you want do remove dis record')"><i class="far fa-trash-alt fa-lg"></i>Delete</a>
             </td>
         </tr>

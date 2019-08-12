@@ -12,7 +12,7 @@ namespace CoreDD.Models
     {
         [Key]
         public int ProductCategory_ID { get; set; }
-        [Column(TypeName = "varchar(150)")]
+        [Column(TypeName = "nvarchar(150)")]
         [Required]
         public string PD_Name { get; set; }
         [Column(TypeName = "varchar(250)")]

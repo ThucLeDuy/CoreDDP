@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
@@ -13,7 +14,12 @@ namespace CoreDD.Models
         [Key]
         public int ProductId { get; set; }
         [ForeignKey("ProductCategory")]
+        [HiddenInput(DisplayValue = false)]
         public int CategoryId { get; set; }
+        [DisplayName("Product Category")]
+        [Column(TypeName = "nvarchar(250)")]
+        [Required(ErrorMessage = "This field is required.")]
+        public string ProductCategory { get; set; }
         [Column(TypeName = "nvarchar(250)")]
         [Required(ErrorMessage = "This field is required.")]
         [DisplayName("Product Name")]

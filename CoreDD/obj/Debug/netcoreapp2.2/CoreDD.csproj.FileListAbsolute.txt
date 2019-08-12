@@ -49,7 +49,6 @@ C:\Users\ldthuc\Source\Repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Co
 C:\Users\ldthuc\Source\Repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\CoreDD.TagHelpers.input.cache
 C:\Users\ldthuc\Source\Repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\CoreDD.TagHelpers.output.cache
 C:\Users\ldthuc\Source\Repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\CoreDD.RazorCoreGenerate.cache
-C:\Users\ldthuc\Source\Repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\Employee\AddOrEdit.g.cshtml.cs
 C:\Users\ldthuc\Source\Repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\Employee\Index.g.cshtml.cs
 C:\Users\ldthuc\Source\Repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.g.cshtml.cs
 C:\Users\ldthuc\Source\Repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.g.cshtml.cs
@@ -65,3 +64,14 @@ C:\Users\ldthuc\Source\Repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Co
 C:\Users\ldthuc\Source\Repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\CoreDD.dll
 C:\Users\ldthuc\Source\Repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\CoreDD.pdb
 C:\Users\ldthuc\Source\Repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\CoreDD.csproj.CopyComplete
+C:\Users\ldthuc\source\repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\Employee\AddOrEditEmployee.g.cshtml.cs
+C:\Users\ldthuc\source\repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\ProductCategories\Create.g.cshtml.cs
+C:\Users\ldthuc\source\repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\ProductCategories\Delete.g.cshtml.cs
+C:\Users\ldthuc\source\repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\ProductCategories\Details.g.cshtml.cs
+C:\Users\ldthuc\source\repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\ProductCategories\Edit.g.cshtml.cs
+C:\Users\ldthuc\source\repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\ProductCategories\Index.g.cshtml.cs
+C:\Users\ldthuc\source\repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\Products\Create.g.cshtml.cs
+C:\Users\ldthuc\source\repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\Products\Delete.g.cshtml.cs
+C:\Users\ldthuc\source\repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\Products\Details.g.cshtml.cs
+C:\Users\ldthuc\source\repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\Products\Edit.g.cshtml.cs
+C:\Users\ldthuc\source\repos\ThucLeDuy\CoreDDP\CoreDD\obj\Debug\netcoreapp2.2\Razor\Views\Products\Index.g.cshtml.cs

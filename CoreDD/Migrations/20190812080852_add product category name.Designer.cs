@@ -4,14 +4,16 @@ using CoreDD.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace CoreDD.Migrations
 {
     [DbContext(typeof(DBFoodContext))]
-    partial class DBFoodContextModelSnapshot : ModelSnapshot
+    [Migration("20190812080852_add product category name")]
+    partial class addproductcategoryname
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

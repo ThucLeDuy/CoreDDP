@@ -44,7 +44,7 @@ namespace CoreDD.Controllers
 
 
         // GET: Employee/Create
-        public IActionResult AddOrEdit(int id=0)
+        public IActionResult AddOrEditEmployee(int id=0)
         {
             if(id == 0)
                 return View(new Employee());
@@ -57,7 +57,7 @@ namespace CoreDD.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> AddOrEdit([Bind("EmployeeId,FullName,EmpCode,Position,OfficeLocation,HireDate,BaseSalary")] Employee employee)
+        public async Task<IActionResult> AddOrEditEmployee([Bind("EmployeeId,EmpCode,Position,OfficeLocation,HireDate,BaseSalary")] Employee employee)
         {
             if (ModelState.IsValid)
             {
