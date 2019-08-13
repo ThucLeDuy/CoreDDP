@@ -52,6 +52,11 @@ namespace CoreDD.Controllers
         // GET: Products/Create
         public IActionResult Create()
         {
+            //List<ProductCategory> listCatagories = _context.ProductCategories.ToList();
+
+            SelectList cateList = new SelectList(_context.ProductCategories.ToList(), "ProductCategory_ID", "PD_Name", 1);
+            ViewBag.listCatagories = cateList;
+            //ViewData["cateList"] = listCatagories;
             return View();
         }
 
@@ -62,6 +67,7 @@ namespace CoreDD.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("ProductId,CategoryId,ProductCategory,ProductName,Image,Description,SalePrice,TimesBooked,Quantity")] Product product)
         {
+            
             if (ModelState.IsValid)
             {
                 _context.Add(product);

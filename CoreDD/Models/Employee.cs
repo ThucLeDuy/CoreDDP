@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace CoreDD.Models
 {
-    public class Employee
+    public class Employee:TagHelper
     {
         [Key]
         public int EmployeeId { get; set; }

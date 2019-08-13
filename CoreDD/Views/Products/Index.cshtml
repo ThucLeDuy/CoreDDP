@@ -13,6 +13,7 @@
     <thead>
         <tr>
             <th>
+                @Url.Action("GetProductCategoryName", "Products", new { id = 1 })
                 @*Html.DisplayNameFor(model => model.CategoryId)*@
                 @ViewData["ProductCaName"]
             </th>
@@ -44,6 +45,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                
                 @*@Html.DisplayFor(modelItem => item.CategoryId)*@
             </td>
             <td>
@@ -79,3 +81,6 @@
 }
     </tbody>
 </table>
+<div>
+    
+</div>

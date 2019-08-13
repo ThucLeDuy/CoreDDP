@@ -33,7 +33,7 @@ namespace CoreDD
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddAuthentication();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddDbContext<DBFoodContext>(options =>

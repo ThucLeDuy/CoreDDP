@@ -18,9 +18,11 @@
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                
-                <label asp-for="ProductCategory" class="control-label"></label>
-                <input asp-for="ProductCategory" class="form-control" />
+                @*@Html.DropDownList("1", (IEnumerable<SelectListItem>)ViewBag.cateList, new { @class = "form-control" })*@
+                <select asp-for="ProductCategory" asp-items=@ViewBag.listCatagories class="form-control">
+                </select>
+                @*<label asp-for="ProductCategory" class="control-label"></label>
+                <input asp-for="ProductCategory" class="form-control" />*@
                 <span asp-validation-for="ProductCategory" class="text-danger"></span>
             </div>
             <div class="form-group">

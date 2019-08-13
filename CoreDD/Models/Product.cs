@@ -41,5 +41,7 @@ namespace CoreDD.Models
         [Column(TypeName = "int")]
         [DisplayName("Quantity")]
         public int Quantity { get; set; }
+        //[NotMapped]
+        //public List<ProductCategory> ListProductCatalogories = 
     }
 }
