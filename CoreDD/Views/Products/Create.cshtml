@@ -1,5 +1,7 @@
 ﻿@model CoreDD.Models.Product
 
+
+
 @{
     ViewData["Title"] = "Create";
 }
@@ -7,53 +9,67 @@
 <h1>Create</h1>
 
 <h4>Product</h4>
+<script language="javascript">
+    function getValFromSelectItem() {
+        var e = document.getElementById('selectCategories');
+        var option = e.options[e.selectedIndex].value;
+        document.getElementById('hiddenSelectCategories').value = option;
+    }
+</script>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-12">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
-                <input asp-for="CategoryId" class="form-control" />
-                <span asp-validation-for="CategoryId" class="text-danger"></span>
+                @*<label asp-for="CategoryId" class="control-label"></label>*@
+                <input id="hiddenSelectCategories" asp-for="CategoryId" class="form-control" />
+                @*<span asp-validation-for="CategoryId" class="text-danger"></span>*@
             </div>
-            <div class="form-group">
-                @*@Html.DropDownList("1", (IEnumerable<SelectListItem>)ViewBag.cateList, new { @class = "form-control" })*@
-                <select asp-for="ProductCategory" asp-items=@ViewBag.listCatagories class="form-control">
-                </select>
-                @*<label asp-for="ProductCategory" class="control-label"></label>
-                <input asp-for="ProductCategory" class="form-control" />*@
-                <span asp-validation-for="ProductCategory" class="text-danger"></span>
+
+            <div class="form-row">
+                <div class="form-group col-sm-4">
+                    <label asp-for="ProductCategory" class="control-label"></label>
+                    <select onload="getValFromSelectItem()" onchange="getValFromSelectItem()" id="selectCategories" asp-for="ProductCategory" asp-items=@ViewBag.selectListCatagories class="form-control">
+                        <option selected disabled hidden>Choose here</option>
+                    </select>
+                    <span asp-validation-for="ProductCategory" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label asp-for="ProductName" class="control-label"></label>
+                    <input asp-for="ProductName" class="form-control" />
+                    <span asp-validation-for="ProductName" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label asp-for="Image" class="control-label"></label>
+                    <input asp-for="Image" class="form-control" />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="ProductName" class="control-label"></label>
-                <input asp-for="ProductName" class="form-control" />
-                <span asp-validation-for="ProductName" class="text-danger"></span>
+            <div class="form-row">
+                <div class="form-group col-sm-4">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label asp-for="SalePrice" class="control-label"></label>
+                    <input asp-for="SalePrice" class="form-control" />
+                    <span asp-validation-for="SalePrice" class="text-danger"></span>
+                </div>
+                <div class="form-group col-sm-4">
+                    <label asp-for="TimesBooked" class="control-label"></label>
+                    <input asp-for="TimesBooked" class="form-control" />
+                    <span asp-validation-for="TimesBooked" class="text-danger"></span>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="Image" class="control-label"></label>
-                <input asp-for="Image" class="form-control" />
-                <span asp-validation-for="Image" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="SalePrice" class="control-label"></label>
-                <input asp-for="SalePrice" class="form-control" />
-                <span asp-validation-for="SalePrice" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TimesBooked" class="control-label"></label>
-                <input asp-for="TimesBooked" class="form-control" />
-                <span asp-validation-for="TimesBooked" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Quantity" class="control-label"></label>
-                <input asp-for="Quantity" class="form-control" />
-                <span asp-validation-for="Quantity" class="text-danger"></span>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label asp-for="Quantity" class="control-label"></label>
+                    <input asp-for="Quantity" class="form-control" />
+                    <span asp-validation-for="Quantity" class="text-danger"></span>
+                </div>
+                
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -63,7 +79,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <button class="btn btn-outline-secondary" asp-action="Index">Back to List</button>
 </div>
 
 @section Scripts {

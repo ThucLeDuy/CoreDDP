@@ -55,7 +55,9 @@ namespace CoreDD.Controllers
             //List<ProductCategory> listCatagories = _context.ProductCategories.ToList();
 
             SelectList cateList = new SelectList(_context.ProductCategories.ToList(), "ProductCategory_ID", "PD_Name", 1);
-            ViewBag.listCatagories = cateList;
+            
+            ViewBag.selectListCatagories = cateList;
+            ViewBag.listCatagories = _context.ProductCategories.ToList();
             //ViewData["cateList"] = listCatagories;
             return View();
         }
