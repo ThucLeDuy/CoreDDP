@@ -12,9 +12,9 @@ namespace CoreDD.Models
     {
         [Key]
         public int UserId { get; set; }
+        [EmailAddress]
         [Display(Name = "Email address")]
-        [Required(ErrorMessage = "The email address is required")]
-        [EmailAddress(ErrorMessage = "Invalid Email Address")]
+        [Required(ErrorMessage = "The email address is required")]        
         public string Email { get; set; }
         [Required(ErrorMessage = "This field is required")]
         [Column(TypeName = "nvarchar(250)")]
@@ -34,11 +34,16 @@ namespace CoreDD.Models
         [Required(ErrorMessage = "Birth Date is required.")]
         [RegularExpression(@"(((0|1)[0-9]|2[0-9]|3[0-1])\/(0[1-9]|1[0-2])\/((19|20)\d\d))$", ErrorMessage = "Invalid date format.")]
         public DateTime? Dob { get; set; }
-
+        [Phone]
+        [Column(TypeName = "varchar(50)")]
+        [DisplayName("Phone Number")]
         public string Phonenumber { get; set; }
-
+        [Column(TypeName = "nvarchar(550)")]
+        [DisplayName("Address")]
         public string Address { get; set; }
-
+        [Column(TypeName = "nvarchar(750)")]
+        [DisplayName("Image Name")]
         public string Image { get; set; }
+        public ICollection<Invoice> Invoices { get; set; }
     }
 }

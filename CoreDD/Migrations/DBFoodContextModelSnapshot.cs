@@ -45,6 +45,56 @@ namespace CoreDD.Migrations
                     b.ToTable("Employees");
                 });
 
+            modelBuilder.Entity("CoreDD.Models.Invoice", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(550)");
+
+                    b.Property<int>("EmployeeId");
+
+                    b.Property<DateTime>("InvoiceDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<decimal?>("Total")
+                        .HasColumnType("money");
+
+                    b.Property<int>("UserId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Invoices");
+                });
+
+            modelBuilder.Entity("CoreDD.Models.InvoiceDetail", b =>
+                {
+                    b.Property<int>("Id_Invoice")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int?>("InvoiceId");
+
+                    b.Property<int>("ProductId");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id_Invoice");
+
+                    b.HasIndex("InvoiceId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("InvoiceDetails");
+                });
+
             modelBuilder.Entity("CoreDD.Models.Product", b =>
                 {
                     b.Property<int>("ProductId")
@@ -68,9 +118,6 @@ namespace CoreDD.Migrations
                     b.Property<string>("ProductName")
                         .IsRequired()
                         .HasColumnType("nvarchar(250)");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
 
                     b.Property<decimal?>("SalePrice")
                         .HasColumnType("money");
@@ -101,6 +148,70 @@ namespace CoreDD.Migrations
                     b.HasKey("ProductCategory_ID");
 
                     b.ToTable("ProductCategories");
+                });
+
+            modelBuilder.Entity("CoreDD.Models.StoreUser", b =>
+                {
+                    b.Property<int>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(550)");
+
+                    b.Property<DateTime?>("Dob")
+                        .IsRequired()
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("Email")
+                        .IsRequired();
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)");
+
+                    b.Property<int?>("Gender")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("nvarchar(750)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(250)")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Phonenumber")
+                        .HasColumnType("varchar(50)");
+
+                    b.HasKey("UserId");
+
+                    b.ToTable("StoreUsers");
+                });
+
+            modelBuilder.Entity("CoreDD.Models.Invoice", b =>
+                {
+                    b.HasOne("CoreDD.Models.Employee")
+                        .WithMany("Invoices")
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CoreDD.Models.StoreUser")
+                        .WithMany("Invoices")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("CoreDD.Models.InvoiceDetail", b =>
+                {
+                    b.HasOne("CoreDD.Models.Invoice")
+                        .WithMany("InvoicesDetails")
+                        .HasForeignKey("InvoiceId");
+
+                    b.HasOne("CoreDD.Models.Product")
+                        .WithMany("InvoiceDetails")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("CoreDD.Models.Product", b =>

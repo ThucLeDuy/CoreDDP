@@ -12,7 +12,11 @@ namespace CoreDD.Controllers
     public class ProductsController : Controller
     {
         private readonly DBFoodContext _context;
-
+        [Route("/Products/IndexTemplate")]
+        public IActionResult IndexTemplate()
+        {
+            return View("IndexTemplate");
+        }
         public ProductsController(DBFoodContext context)
         {
             _context = context;

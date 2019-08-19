@@ -29,7 +29,7 @@ namespace CoreDD.Models
         [DisplayName("Image Name")]
         public string Image { get; set; }
         [Column(TypeName = "nvarchar(550)")]       
-        [DisplayName("Image")]
+        [DisplayName("Description")]
         public string Description { get; set; }
         [Column(TypeName = "money")]
         [DisplayName("Sale Price")]
@@ -38,10 +38,11 @@ namespace CoreDD.Models
         [Column(TypeName = "int")]
         [DisplayName("Time Book")]
         public int? TimesBooked { get; set; }
-        [Column(TypeName = "int")]
-        [DisplayName("Quantity")]
-        public int Quantity { get; set; }
+        //[Column(TypeName = "int")]
+        //[DisplayName("Quantity")]
+        //public int Quantity { get; set; }
         //[NotMapped]
         //public List<ProductCategory> ListProductCatalogories = 
+        public ICollection<InvoiceDetail> InvoiceDetails { get; set; }
     }
 }

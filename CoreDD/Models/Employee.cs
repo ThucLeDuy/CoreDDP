@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Razor.TagHelpers;
@@ -24,5 +25,6 @@ namespace CoreDD.Models
         [DisplayName("Base Salary")]
         [DisplayFormat(DataFormatString = "{0:C0}")]
         public decimal? BaseSalary { get; set; }
+        public ICollection<Invoice> Invoices { get; set; }
     }
 }

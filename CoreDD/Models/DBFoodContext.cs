@@ -14,6 +14,9 @@ namespace CoreDD.Models
 
         public DbSet<Employee> Employees { get; set; }
         public DbSet<ProductCategory> ProductCategories { get; set; }
+        public DbSet<StoreUser> StoreUsers { get; set; }
+        public DbSet<Invoice> Invoices { get; set; }
+        public DbSet<InvoiceDetail> InvoiceDetails { get; set; }
         public DbSet<Product> Products { get; set; }
     }
 }
